@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/animations.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <p class="top-text">GUESS GURU</p>
+    <div class="top">
+      <p>Level: <span id="level">1</span></p>
+      <p> <i class="bx bx-dice-3 bx-sm"></i><span id="tip">0</span></p>
+      <i id="clear" class='bx  bx-refresh-cw-dot bx-sm' title="Clear data"></i>
+    </div>
+
+    <div class="middle">
+      <p class="note"> Guess a number from 1 - <span id="instruction"></span></p>
+      <p class="error" id="error">Do not choose the same number twice</p>
+    </div>
+
+    <div class="elements">
+        <input placeholder="Guess a number" type="number" id="guess">
+      <div class="buttons">
+        <i id="btn" class="bx bx-play-circle bx-beat bx-sm" title="Guess"></i>
+        <i id="tip-btn" class="bx bx-dice-3 bx-bounce bx-sm" title="Tip"></i>
+      </div>
+    </div>
+    <div class="show-guesses" id="show-guesses-p">Guesses: <span id="show-guesses"></span> </div>
+
+    <div class="container">
+      <p id="availabe-guess-para" title="Available chances"><i class="bx bx-timer bx-spin bx-sm "></i> <span id="limit"></span></p>
+
+      <p id="ans"></p>
+    </div>
+  </div>
+
+  <div class="confirm-clear" id="confirm-clear-div">
+    <p>Are sure you want to clear all data</p>
+    <div>
+      <button id="cancel-clear">Cancel</button>
+      <button id="ok-clear">Ok</button>
+    </div>
+  </div>
+
+  <div class="info" id="info">
+    <h1 class="confirm-text" id="confirm-text"></h1>
+    <h3 class="disp-level" id="disp-level-p">Level: <span id="disp-level"></span></h3>
+    <button class="confirm" id="confirm-info">Ok</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
